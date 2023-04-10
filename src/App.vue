@@ -1,25 +1,36 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
 import LocalStorageManagement from '@/components/LocalStorageManagement.vue';
+import CsdnTool from '@/components/CsdnTool.vue';
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="toolWrapper">
+    <CsdnTool></CsdnTool>
   </div>
-  <HelloWorld msg="Vite + Vue" />
-  <LocalStorageManagement></LocalStorageManagement>
+  <div class="localStorageWrapper">
+    <LocalStorageManagement></LocalStorageManagement>
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="less">
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.localStorageWrapper {
+  min-width: 500px;
+  max-height: 320px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.toolWrapper {
+  min-width: 500px;
+  max-height: 320px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
